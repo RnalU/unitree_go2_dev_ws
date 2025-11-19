@@ -1,0 +1,46 @@
+# Example configuration for the Unitree-side UDP/Wi-Fi bridge
+transport:
+  local_ip: 172.16.6.156           # interface used for the UDP sockets
+  default_remote_ip: 172.16.6.53
+  default_remote_port: 56000
+  default_listen_port: 57000
+  max_datagram_size: 60000
+  queue_poll_interval: 0.01
+
+streams:
+  # Robot -> host streams
+  - name: voxel_stream
+    direction: send
+    local_topic: /utlidar/voxel_map_compressed
+    remote_topic: /go2/voxel_map
+    msg_type: go2_interfaces/msg/VoxelMapCompressed
+    remote_port: 56010
+
+  - name: odom_stream
+    direction: send
+    local_topic: /dog_odom
+    remote_topic: /go2/odom
+    msg_type: nav_msgs/msg/Odometry
+    remote_port: 56011
+
+  - name: joint_state_stream
+    direction: send
+    local_topic: /joint_states
+    remote_topic: /go2/joint_states
+    msg_type: sensor_msgs/msg/JointState
+    remote_port: 56012
+
+  # Host -> robot control streams
+  - name: velocity_cmd
+    direction: receive
+    local_topic: /cmd_vel
+    remote_topic: /host/cmd_vel
+    msg_type: geometry_msgs/msg/Twist
+    listen_port: 57001
+
+  - name: joint_control
+    direction: receive
+    local_topic: /lowcmd
+    remote_topic: /host/lowcmd
+    msg_type: go2_interfaces/msg/LowCmd
+    listen_port: 57002

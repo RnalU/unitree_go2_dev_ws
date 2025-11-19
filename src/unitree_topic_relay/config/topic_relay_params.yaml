@@ -1,0 +1,52 @@
+# Unitree Topic Relay 配置文件
+# 
+# 此文件定义了话题转发的映射关系
+# 根据实际的宇树话题名称进行调整
+
+/**:
+  ros__parameters:
+    # ============================================
+    # 激光雷达话题配置
+    # ============================================
+    # 输入：宇树内部主板发布的激光雷达话题
+    lidar_input_topic: '/utlidar/scan'
+    # 输出：标准ROS2 Navigation使用的话题名称
+    lidar_output_topic: '/scan'
+    enable_lidar_relay: true
+    
+    # ============================================
+    # 里程计话题配置
+    # ============================================
+    odom_input_topic: '/utlidar/robot_odom'
+    odom_output_topic: '/odom'
+    enable_odom_relay: true
+    
+    # ============================================
+    # IMU话题配置
+    # ============================================
+    imu_input_topic: '/utlidar/imu'
+    imu_output_topic: '/imu'
+    enable_imu_relay: true
+    
+    # ============================================
+    # TF变换话题配置
+    # ============================================
+    tf_input_topic: '/tf'
+    tf_output_topic: '/tf_relay'
+    
+    tf_static_input_topic: '/tf_static'
+    tf_static_output_topic: '/tf_static_relay'
+    enable_tf_relay: true
+    
+    # ============================================
+    # 速度指令话题配置（反向转发）
+    # ============================================
+    # 从笔记本发送的标准cmd_vel转发到宇树的控制话题
+    cmd_vel_input_topic: '/cmd_vel'
+    cmd_vel_output_topic: '/cmd_vel_unitree'
+    enable_cmd_vel_relay: true
+
+# 注意事项：
+# 1. 请根据实际的宇树话题名称修改 *_input_topic
+# 2. 可以通过 enable_*_relay 参数来启用/禁用特定的转发
+# 3. 如果需要添加其他话题转发，需要修改节点代码

@@ -1,0 +1,40 @@
+<!-- <?xml version="1.0" encoding="UTF-8" ?>
+<CycloneDDS xmlns="https://cdds.io/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://cdds.io/config https://raw.githubusercontent.com/eclipse-cyclonedds/cyclonedds/master/etc/cyclonedds.xsd">
+    <Domain id="any">
+        <General>
+            <NetworkInterfaceAddress>172.16.6.53</NetworkInterfaceAddress>
+            <AllowMulticast>true</AllowMulticast>
+            <EnableMulticastLoopback>true</EnableMulticastLoopback>
+        </General>
+        <Discovery>
+            <ParticipantIndex>auto</ParticipantIndex>
+            <MaxAutoParticipantIndex>120</MaxAutoParticipantIndex>
+            <Peers>
+                <Peer address="172.16.6.156"/>
+            </Peers>
+        </Discovery>
+    </Domain>
+</CycloneDDS> -->
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<CycloneDDS xmlns="https://cdds.io/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://cdds.io/config https://raw.githubusercontent.com/eclipse-cyclonedds/cyclonedds/master/etc/cyclonedds.xsd">
+    <Domain Id="any">
+        <General>
+            <NetworkInterfaces>
+                <NetworkInterface name="docker0" priority="default" multicast="default"/>
+            </NetworkInterfaces>
+            <MaxMessageSize>65500B</MaxMessageSize>
+            <AllowMulticast>true</AllowMulticast>
+            <EnableMulticastLoopback>true</EnableMulticastLoopback>
+        </General>
+
+        <Internal>
+                <!-- <MinimumSocketReceiveBufferSize>50MB</MinimumSocketReceiveBufferSize> -->
+        </Internal>
+        <Tracing>
+                <Verbosity>config</Verbosity>
+                <OutputFile>cdds_log/cdds.log.${CYCLONEDDS_PID}</OutputFile>
+        </Tracing>
+    </Domain>
+</CycloneDDS>

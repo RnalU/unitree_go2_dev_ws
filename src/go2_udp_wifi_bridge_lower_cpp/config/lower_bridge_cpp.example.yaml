@@ -1,0 +1,67 @@
+transport:
+  local_ip: 172.16.6.156
+  default_remote_ip: 172.16.6.53
+  default_remote_port: 56000
+  default_listen_port: 57000
+  max_datagram_size: 32000
+  queue_poll_interval: 0.005
+  socket_buffer_bytes: 8388608
+
+streams:
+  - name: voxel_stream
+    direction: send
+    local_topic: /utlidar/voxel_map_compressed
+    remote_topic: /go2/voxel_map
+    msg_type: go2_interfaces/msg/VoxelMapCompressed
+    remote_port: 56010
+
+  - name: odom_stream
+    direction: send
+    local_topic: /dog_odom
+    remote_topic: /go2/odom
+    msg_type: nav_msgs/msg/Odometry
+    remote_port: 56011
+
+  - name: joint_state_stream
+    direction: send
+    local_topic: /joint_states
+    remote_topic: /go2/joint_states
+    msg_type: sensor_msgs/msg/JointState
+    remote_port: 56012
+
+  - name: Mid_360_IMU
+    direction: send
+    local_topic: /unitree/slam_lidar/imu
+    remote_topic: /go2/slam_lidar/imu
+    msg_type: sensor_msgs/msg/Imu
+    remote_port: 56013
+
+  - name: Mid_360_Points
+    direction: send
+    local_topic: /unitree/slam_lidar/points
+    remote_topic: /go2/slam_lidar/points
+    msg_type: sensor_msgs/msg/PointCloud2
+    remote_port: 56014
+
+  - name: Mid_360_Scan
+    direction: send
+    local_topic: /scan
+    remote_topic: /go2/scan
+    msg_type: sensor_msgs/msg/LaserScan
+    remote_port: 56016
+
+
+# Host -> robot control streams
+  - name: velocity_cmd
+    direction: receive
+    local_topic: /cmd_vel
+    remote_topic: /host/cmd_vel
+    msg_type: geometry_msgs/msg/Twist
+    listen_port: 57001
+
+  - name: joint_control
+    direction: receive
+    local_topic: /lowcmd
+    remote_topic: /host/lowcmd
+    msg_type: go2_interfaces/msg/LowCmd
+    listen_port: 57002

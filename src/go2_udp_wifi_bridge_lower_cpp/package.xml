@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>go2_udp_wifi_bridge_lower_cpp</name>
+  <version>0.1.0</version>
+  <description>High-performance C++ UDP bridge node for the Unitree Go2 expansion board.</description>
+  <maintainer email="robot@example.com">Unitree Bridge</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>ament_index_cpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>go2_interfaces</depend>
+  <depend>yaml-cpp</depend>
+  <depend>go2_udp_wifi_bridge_common</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

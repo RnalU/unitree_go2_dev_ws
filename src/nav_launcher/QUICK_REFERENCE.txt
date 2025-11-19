@@ -1,0 +1,183 @@
+┌─────────────────────────────────────────────────────────────────────────┐
+│                   🚀 Nav2 快速参考卡片                                     │
+└─────────────────────────────────────────────────────────────────────────┘
+
+📁 关键文件位置
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  启动文件:    src/nav_launcher/launch/*.launch.py
+  参数配置:    src/nav_launcher/params/unitree_nav2_params.yaml
+  地图文件:    src/nav_launcher/maps/
+  文档:        src/nav_launcher/README.md
+  配置清单:    src/nav_launcher/CONFIGURATION_CHECKLIST.md
+  迁移指南:    src/nav_launcher/ROS1_TO_ROS2_MIGRATION.md
+
+🔧 常用命令
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # 构建
+  cd /home/ymc/ros2_nav_unitree_ws
+  colcon build --packages-select nav_launcher --symlink-install
+  source install/setup.zsh
+
+  # 快速构建（使用脚本）
+  ./build_and_test.sh
+
+  # 启动导航
+  ros2 launch nav_launcher unitree_navigation.launch.py
+
+  # 启动导航（指定地图）
+  ros2 launch nav_launcher unitree_navigation.launch.py \
+      map:=/path/to/your/map.yaml
+
+  # 启动SLAM建图模式
+  ros2 launch nav_launcher unitree_navigation.launch.py slam:=True
+
+  # 保存地图
+  ros2 run nav2_map_server map_saver_cli -f ~/my_map
+
+🔍 调试命令
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # 检查话题
+  ros2 topic list
+  ros2 topic echo /scan
+  ros2 topic echo /odom
+  ros2 topic echo /cmd_vel
+  ros2 topic hz /scan
+
+  # 检查节点
+  ros2 node list
+  ros2 node info /controller_server
+
+  # 检查参数
+  ros2 param list /controller_server
+  ros2 param get /controller_server controller_frequency
+  ros2 param set /controller_server FollowPath.max_vel_x 0.3
+
+  # 检查TF
+  ros2 run tf2_tools view_frames
+  ros2 run tf2_ros tf2_echo map odom
+  ros2 run tf2_ros tf2_echo odom base_link
+
+  # 检查生命周期
+  ros2 lifecycle list
+  ros2 lifecycle get /controller_server
+
+  # 发送导航目标（命令行）
+  ros2 action send_goal /navigate_to_pose nav2_msgs/action/NavigateToPose \
+    "{pose: {header: {frame_id: 'map'}, \
+    pose: {position: {x: 2.0, y: 1.0, z: 0.0}, \
+    orientation: {w: 1.0}}}}"
+
+⚙️ 必须修改的配置
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  文件: src/nav_launcher/params/unitree_nav2_params.yaml
+
+  [ ] robot_radius: 0.22           # 机器人半径（米）
+  [ ] max_vel_x: 0.5              # 最大线速度（米/秒）
+  [ ] max_vel_theta: 1.0          # 最大角速度（弧度/秒）
+  [ ] acc_lim_x: 2.5              # 线加速度
+  [ ] acc_lim_theta: 3.2          # 角加速度
+  [ ] scan_topic: scan            # 激光话题名称
+  [ ] odom_topic: /odom           # 里程计话题
+  [ ] base_frame_id: "base_link"  # 基座坐标系
+  [ ] 准备地图文件到 maps/ 目录
+
+📊 Nav2 核心组件
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  amcl                  - 定位（自适应蒙特卡洛定位）
+  map_server            - 地图服务器
+  planner_server        - 全局路径规划器
+  controller_server     - 局部路径跟踪控制器
+  behavior_server       - 恢复行为服务器
+  bt_navigator          - 行为树导航器
+  waypoint_follower     - 路径点跟随器
+  velocity_smoother     - 速度平滑器
+  lifecycle_manager     - 生命周期管理器
+
+🎯 配置优先级
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1️⃣ 验证话题: /scan, /odom, /cmd_vel
+  2️⃣ 验证TF树: map -> odom -> base_link -> laser_frame
+  3️⃣ 修改机器人尺寸和速度限制
+  4️⃣ 准备地图文件
+  5️⃣ 测试定位（2D Pose Estimate）
+  6️⃣ 测试导航（Nav2 Goal）
+  7️⃣ 参数微调优化
+
+⚡ 性能优化
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  启用组合节点:         use_composition:=True
+  调整控制频率:         controller_frequency: 20.0
+  调整代价地图更新:     update_frequency: 5.0
+  调整局部地图大小:     width: 3, height: 3
+  减少粒子数:          max_particles: 1000 (低配置设备)
+
+🐛 常见问题速查
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  问题: 机器人不动
+  → 检查 ros2 topic echo /cmd_vel
+  → 检查速度限制是否太小
+  → 检查机器人控制器是否订阅 /cmd_vel
+
+  问题: 定位不准确
+  → 检查 ros2 topic hz /scan (应该 > 5Hz)
+  → 增加粒子数 max_particles
+  → 检查地图是否正确
+
+  问题: 路径规划失败
+  → 在RVIZ查看代价地图
+  → 减小 robot_radius
+  → 增加规划器 tolerance
+
+  问题: TF错误
+  → ros2 run tf2_tools view_frames
+  → 检查是否缺少 base_link -> laser_frame 变换
+  → 发布缺少的静态TF
+
+📖 文档阅读顺序
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. PROJECT_SUMMARY.md         - 项目总览（先读这个！）
+  2. README.md                   - 快速开始指南
+  3. CONFIGURATION_CHECKLIST.md  - 配置清单（按步骤完成）
+  4. ROS1_TO_ROS2_MIGRATION.md   - ROS1迁移指南
+  5. maps/README.md              - 地图使用说明
+
+🔗 有用链接
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Nav2 官方文档:  https://docs.nav2.org/
+  Nav2 GitHub:    https://github.com/ros-planning/navigation2
+  ROS2 教程:      https://docs.ros.org/en/humble/Tutorials.html
+  Nav2 配置:      https://docs.nav2.org/configuration/index.html
+  Nav2 调优:      https://docs.nav2.org/tuning/index.html
+
+💡 专业提示
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✓ 使用 --symlink-install 加快开发迭代
+  ✓ 先在仿真环境充分测试
+  ✓ 使用版本控制管理配置文件
+  ✓ 记录每次参数修改及其效果
+  ✓ 一次只改一个参数，便于定位问题
+  ✓ 定期备份工作良好的配置
+
+📝 快速测试流程
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. 启动机器人底层驱动（发布 /scan, /odom, 订阅 /cmd_vel）
+  2. 运行: ros2 launch nav_launcher unitree_navigation.launch.py
+  3. 在RVIZ设置 "2D Pose Estimate"
+  4. 等待粒子云收敛（激光与地图匹配）
+  5. 点击 "Nav2 Goal" 发送导航目标
+  6. 观察机器人导航到目标点
+
+🎯 项目状态
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✅ 包结构创建完成
+  ✅ 启动文件配置完成
+  ✅ 参数文件配置完成（带详细注释）
+  ✅ 文档创建完成
+  ⏳ 待配置: 机器人特定参数
+  ⏳ 待准备: 地图文件
+  ⏳ 待测试: 实际机器人上测试
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                        祝你使用愉快！🎉
+          有问题请查看文档或访问 Nav2 官方社区
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

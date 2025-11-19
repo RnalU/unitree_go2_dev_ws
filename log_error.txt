@@ -1,0 +1,158 @@
+ros2 launch nav_launcher unitree_navigation.launch.py\
+
+[INFO] [launch]: All log files can be found below /home/ymc/.ros/log/2025-11-18-13-01-07-444320-OMEN-665500
+[INFO] [launch]: Default logging verbosity is set to INFO
+[DEBUG] Params file: /home/ymc/ros2_nav_unitree_ws/install/nav_launcher/share/nav_launcher/params/unitree_nav2_params_DWB.yaml
+[DEBUG] Map file: /home/ymc/ros2_nav_unitree_ws/install/nav_launcher/share/nav_launcher/maps/office_map.yaml
+[DEBUG] RVIZ config: /home/ymc/ros2_nav_unitree_ws/install/nav_launcher/share/nav_launcher/rviz/nav2_default.rviz
+[INFO] [map_server-1]: process started with pid [665525]
+[INFO] [amcl-2]: process started with pid [665527]
+[INFO] [lifecycle_manager-3]: process started with pid [665529]
+[INFO] [controller_server-4]: process started with pid [665531]
+[INFO] [planner_server-5]: process started with pid [665533]
+[INFO] [recoveries_server-6]: process started with pid [665535]
+[INFO] [bt_navigator-7]: process started with pid [665537]
+[INFO] [waypoint_follower-8]: process started with pid [665539]
+[INFO] [lifecycle_manager-9]: process started with pid [665541]
+[INFO] [rviz2-10]: process started with pid [665543]
+[lifecycle_manager-3] [INFO] [1763442067.703955503] [lifecycle_manager_localization]: Creating
+[lifecycle_manager-9] [INFO] [1763442067.704721200] [lifecycle_manager_navigation]: Creating
+[bt_navigator-7] [INFO] [1763442067.705449096] [bt_navigator]:
+[bt_navigator-7]        bt_navigator lifecycle node launched.
+[bt_navigator-7]        Waiting on external lifecycle transitions to activate
+[bt_navigator-7]        See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-7] [INFO] [1763442067.705548081] [bt_navigator]: Creating
+[waypoint_follower-8] [INFO] [1763442067.705954628] [waypoint_follower]:
+[waypoint_follower-8]   waypoint_follower lifecycle node launched.
+[waypoint_follower-8]   Waiting on external lifecycle transitions to activate
+[waypoint_follower-8]   See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-8] [INFO] [1763442067.706017653] [waypoint_follower]: Creating
+[recoveries_server-6] [INFO] [1763442067.706162495] [recoveries_server]:
+[recoveries_server-6]   recoveries_server lifecycle node launched.
+[recoveries_server-6]   Waiting on external lifecycle transitions to activate
+[recoveries_server-6]   See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-2] [INFO] [1763442067.707809398] [amcl]:
+[amcl-2]        amcl lifecycle node launched.
+[amcl-2]        Waiting on external lifecycle transitions to activate
+[amcl-2]        See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-2] [INFO] [1763442067.707917825] [amcl]: Creating
+[lifecycle_manager-9] [INFO] [1763442067.707851300] [lifecycle_manager_navigation]: Creating and initializing lifecycle service clients
+[controller_server-4] [INFO] [1763442067.708629262] [controller_server]:
+[controller_server-4]   controller_server lifecycle node launched.
+[controller_server-4]   Waiting on external lifecycle transitions to activate
+[controller_server-4]   See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[lifecycle_manager-9] [INFO] [1763442067.709565629] [lifecycle_manager_navigation]: Starting managed nodes bringup...
+[lifecycle_manager-9] [INFO] [1763442067.709586188] [lifecycle_manager_navigation]: Configuring controller_server
+[map_server-1] [INFO] [1763442067.709817990] [map_server]:
+[map_server-1]  map_server lifecycle node launched.
+[map_server-1]  Waiting on external lifecycle transitions to activate
+[map_server-1]  See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-1] [INFO] [1763442067.709922274] [map_server]: Creating
+[controller_server-4] [INFO] [1763442067.713279667] [controller_server]: Creating controller server
+[planner_server-5] [INFO] [1763442067.715121368] [planner_server]:
+[planner_server-5]      planner_server lifecycle node launched.
+[planner_server-5]      Waiting on external lifecycle transitions to activate
+[planner_server-5]      See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-5] [INFO] [1763442067.716498309] [planner_server]: Creating
+[lifecycle_manager-3] [INFO] [1763442067.719240142] [lifecycle_manager_localization]: Creating and initializing lifecycle service clients
+[lifecycle_manager-3] [INFO] [1763442067.720562112] [lifecycle_manager_localization]: Starting managed nodes bringup...
+[lifecycle_manager-3] [INFO] [1763442067.720589180] [lifecycle_manager_localization]: Configuring map_server
+[map_server-1] [INFO] [1763442067.720839335] [map_server]: Configuring
+[map_server-1] [INFO] [map_io]: Loading yaml file: /home/ymc/ros2_nav_unitree_ws/install/nav_launcher/share/nav_launcher/maps/office_map.yaml
+[map_server-1] [DEBUG] [map_io]: resolution: 0.05
+[map_server-1] [DEBUG] [map_io]: origin[0]: -10
+[map_server-1] [DEBUG] [map_io]: origin[1]: -10
+[map_server-1] [DEBUG] [map_io]: origin[2]: 0
+[map_server-1] [DEBUG] [map_io]: free_thresh: 0.25
+[map_server-1] [DEBUG] [map_io]: occupied_thresh: 0.65
+[map_server-1] [DEBUG] [map_io]: mode: trinary
+[map_server-1] [DEBUG] [map_io]: negate: 0
+[map_server-1] [INFO] [map_io]: Loading image_file: /home/ymc/ros2_nav_unitree_ws/install/nav_launcher/share/nav_launcher/maps/office_map.pgm
+[controller_server-4] [INFO] [1763442067.722876354] [local_costmap.local_costmap]:
+[controller_server-4]   local_costmap lifecycle node launched.
+[controller_server-4]   Waiting on external lifecycle transitions to activate
+[controller_server-4]   See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-4] [INFO] [1763442067.723472041] [local_costmap.local_costmap]: Creating Costmap
+[planner_server-5] [INFO] [1763442067.732308434] [global_costmap.global_costmap]:
+[planner_server-5]      global_costmap lifecycle node launched.
+[planner_server-5]      Waiting on external lifecycle transitions to activate
+[planner_server-5]      See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-5] [INFO] [1763442067.733579046] [global_costmap.global_costmap]: Creating Costmap
+[controller_server-4] [INFO] [1763442067.736060393] [controller_server]: Configuring controller interface
+[controller_server-4] [INFO] [1763442067.736393093] [controller_server]: Controller frequency set to 20.0000Hz
+[controller_server-4] [INFO] [1763442067.736435092] [local_costmap.local_costmap]: Configuring
+[controller_server-4] [INFO] [1763442067.739042007] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+[map_server-1] [DEBUG] [map_io]: Read map /home/ymc/ros2_nav_unitree_ws/install/nav_launcher/share/nav_launcher/maps/office_map.pgm: 384 X 384 map @ 0.05 m/cell
+[lifecycle_manager-3] [INFO] [1763442067.742198416] [lifecycle_manager_localization]: Configuring amcl
+[controller_server-4] [INFO] [1763442067.742251970] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[amcl-2] [INFO] [1763442067.742395909] [amcl]: Configuring
+[amcl-2] [INFO] [1763442067.742495580] [amcl]: initTransforms
+[amcl-2] [INFO] [1763442067.744690595] [amcl]: initPubSub
+[controller_server-4] [INFO] [1763442067.745635621] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[controller_server-4] [INFO] [1763442067.745664689] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[amcl-2] [INFO] [1763442067.745712251] [amcl]: Subscribed to map topic.
+[controller_server-4] [INFO] [1763442067.746155284] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[lifecycle_manager-3] [INFO] [1763442067.747290236] [lifecycle_manager_localization]: Activating map_server
+[map_server-1] [INFO] [1763442067.747407426] [map_server]: Activating
+[lifecycle_manager-3] [INFO] [1763442067.747989283] [lifecycle_manager_localization]: Activating amcl
+[amcl-2] [INFO] [1763442067.748091674] [amcl]: Activating
+[amcl-2] [WARN] [1763442067.748109282] [amcl]: Publishing the particle cloud as geometry_msgs/PoseArray msg is deprecated, will be published as nav2_msgs/ParticleCloud in the future
+[lifecycle_manager-3] [INFO] [1763442067.748503267] [lifecycle_manager_localization]: Managed nodes are active
+[amcl-2] [INFO] [1763442067.749461462] [amcl]: Received a 384 X 384 map @ 0.050 m/pix
+[controller_server-4] [INFO] [1763442067.749943755] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-4] [INFO] [1763442067.750595392] [controller_server]: Created goal_checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-4] [INFO] [1763442067.752871148] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[controller_server-4] [INFO] [1763442067.753378824] [controller_server]: Setting transform_tolerance to 0.200000
+[controller_server-4] [INFO] [1763442067.758888773] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[controller_server-4] [INFO] [1763442067.759141150] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1763442067.759213592] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[controller_server-4] [INFO] [1763442067.759519538] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1763442067.759657408] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[controller_server-4] [INFO] [1763442067.759828794] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1763442067.759940655] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[controller_server-4] [INFO] [1763442067.760219910] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1763442067.760319958] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[controller_server-4] [INFO] [1763442067.760579887] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1763442067.760687545] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[controller_server-4] [INFO] [1763442067.760859011] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1763442067.760945940] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[controller_server-4] [INFO] [1763442067.761170338] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1763442067.761193393] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-9] [INFO] [1763442067.764228825] [lifecycle_manager_navigation]: Configuring planner_server
+[planner_server-5] [INFO] [1763442067.764389197] [planner_server]: Configuring
+[planner_server-5] [INFO] [1763442067.764418299] [global_costmap.global_costmap]: Configuring
+[planner_server-5] [INFO] [1763442067.766316077] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-5] [INFO] [1763442067.768364804] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-5] [INFO] [1763442067.768792149] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-5] [INFO] [1763442067.768807613] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-5] [INFO] [1763442067.769189366] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-5] [INFO] [1763442067.770463081] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-5] [INFO] [1763442067.770480288] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-5] [INFO] [1763442067.770901172] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-5] [INFO] [1763442067.773815513] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner/NavfnPlanner
+[planner_server-5] [INFO] [1763442067.773837477] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-5] [INFO] [1763442067.775359634] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-9] [INFO] [1763442067.777106216] [lifecycle_manager_navigation]: Configuring recoveries_server
+[recoveries_server-6] [INFO] [1763442067.777233024] [recoveries_server]: Configuring
+[planner_server-5] [INFO] [1763442067.779334715] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 384 X 384 at 0.050000 m/pix
+[recoveries_server-6] [INFO] [1763442067.779675239] [recoveries_server]: Creating recovery plugin spin of type nav2_recoveries/Spin
+[recoveries_server-6] [INFO] [1763442067.780386714] [recoveries_server]: Configuring spin
+[recoveries_server-6] [INFO] [1763442067.781963619] [recoveries_server]: Creating recovery plugin backup of type nav2_recoveries/BackUp
+[recoveries_server-6] [INFO] [1763442067.782600576] [recoveries_server]: Configuring backup
+[recoveries_server-6] [INFO] [1763442067.783653989] [recoveries_server]: Creating recovery plugin wait of type nav2_recoveries/Wait
+[recoveries_server-6] [INFO] [1763442067.784259217] [recoveries_server]: Configuring wait
+[lifecycle_manager-9] [INFO] [1763442067.785528615] [lifecycle_manager_navigation]: Configuring bt_navigator
+[bt_navigator-7] [INFO] [1763442067.785676953] [bt_navigator]: Configuring
+[bt_navigator-7] [ERROR] [1763442067.796986555] []: Caught exception in callback for transition 10
+[bt_navigator-7] [ERROR] [1763442067.797001812] []: Original error: Could not load library: libnav2_rotate_action_bt_node.so: cannot open shared object file: No such file or directory
+[bt_navigator-7] [WARN] [1763442067.797019424] []: Error occurred while doing error handling.
+[bt_navigator-7] [FATAL] [1763442067.797025045] [bt_navigator]: Lifecycle node bt_navigator does not have error state implemented
+[lifecycle_manager-9] [ERROR] [1763442067.797333520] [lifecycle_manager_navigation]: Failed to change state for node: bt_navigator
+[lifecycle_manager-9] [ERROR] [1763442067.797352770] [lifecycle_manager_navigation]: Failed to bring up all requested nodes. Aborting bringup.
+[amcl-2] [INFO] [1763442067.863467500] [amcl]: createLaserObject
+[rviz2-10] [INFO] [1763442068.135383270] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-10] [INFO] [1763442068.135504050] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-10] [INFO] [1763442068.160030472] [rviz2]: Stereo is NOT SUPPORTED
+[amcl-2] [INFO] [1763442068.850390597] [amcl_rclcpp_node]: Message Filter dropping message: frame 'base_link' at time 1763442067.593 for reason 'Unknown'
+[amcl-2] [WARN] [1763442069.791484718] [amcl]: ACML cannot publish a pose or update the transform. Please set the initial pose...
+[amcl-2] [WARN] [1763442071.796894694] [amcl]: ACML cannot publish a pose or update the transform. Please set the initial pose...

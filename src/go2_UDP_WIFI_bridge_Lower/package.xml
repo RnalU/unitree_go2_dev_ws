@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>go2_UDP_WIFI_bridge_Lower</name>
+  <version>0.1.0</version>
+  <description>UDP/Wi-Fi bridge node that runs on the Unitree Go2 expansion board and forwards selected ROS 2 topics to a remote host.</description>
+  <maintainer email="robot@example.com">Unitree Bridge</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>rosidl_runtime_py</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>go2_interfaces</depend>
+
+  <exec_depend>python3-yaml</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
