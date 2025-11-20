@@ -7,7 +7,8 @@
   <Domain Id="any">
     <General>
       <Interfaces> 
-        <NetworkInterface name="eno1" priority="default" multicast="true"/>
+        <NetworkInterface name="wlp0s20f3" priority="default" multicast="true"/>
+        <!-- <NetworkInterface name="eno1" priority="default" multicast="true"/> -->
       </Interfaces>
       <AllowMulticast>true</AllowMulticast>
       <MaxMessageSize>65500B</MaxMessageSize>

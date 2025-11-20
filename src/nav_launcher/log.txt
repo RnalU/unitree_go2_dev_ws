@@ -1,0 +1,250 @@
+nitree@ubuntu:~/nav_unitree_go2_branch_ws$ ros2 launch nav_launcher unitree_navigation.launch.py 
+[INFO] [launch]: All log files can be found below /home/unitree/.ros/log/2025-11-19-20-38-03-377629-ubuntu-15957
+[INFO] [launch]: Default logging verbosity is set to INFO
+[DEBUG] Params file: /home/unitree/nav_unitree_go2_branch_ws/install/nav_launcher/share/nav_launcher/params/unitree_nav2_params_DWB.yaml
+[DEBUG] Map file: /home/unitree/nav_unitree_go2_branch_ws/install/nav_launcher/share/nav_launcher/maps/lab_map.yaml
+[DEBUG] RVIZ config: /home/unitree/nav_unitree_go2_branch_ws/install/nav_launcher/share/nav_launcher/rviz/nav2_default.rviz
+[INFO] [static_transform_publisher-1]: process started with pid [15959]
+[INFO] [pointcloud_to_laserscan_node-2]: process started with pid [15961]
+[INFO] [map_server-3]: process started with pid [15963]
+[INFO] [amcl-4]: process started with pid [15965]
+[INFO] [lifecycle_manager-5]: process started with pid [15967]
+[INFO] [controller_server-6]: process started with pid [15969]
+[INFO] [planner_server-7]: process started with pid [15971]
+[INFO] [recoveries_server-8]: process started with pid [15973]
+[INFO] [bt_navigator-9]: process started with pid [15984]
+[INFO] [waypoint_follower-10]: process started with pid [16019]
+[INFO] [lifecycle_manager-11]: process started with pid [16033]
+[INFO] [rviz2-12]: process started with pid [16036]
+[INFO] [set_initial_pose-13]: process started with pid [16046]
+[static_transform_publisher-1] [INFO] [1763555884.182784246] [static_transform_publisher]: Spinning until killed publishing transform from 'base_link' to 'livox_frame'
+[lifecycle_manager-5] [INFO] [1763555884.138380562] [lifecycle_manager_localization]: Creating
+[lifecycle_manager-5] [INFO] [1763555884.166620899] [lifecycle_manager_localization]: Creating and initializing lifecycle service clients
+[lifecycle_manager-5] [INFO] [1763555884.216434532] [lifecycle_manager_localization]: Starting managed nodes bringup...
+[lifecycle_manager-5] [INFO] [1763555884.216538055] [lifecycle_manager_localization]: Configuring map_server
+[map_server-3] [INFO] [1763555884.246582380] [map_server]: 
+[map_server-3] 	map_server lifecycle node launched. 
+[map_server-3] 	Waiting on external lifecycle transitions to activate
+[map_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-3] [INFO] [1763555884.246826452] [map_server]: Creating
+[map_server-3] [INFO] [1763555884.297459277] [map_server]: Configuring
+[map_server-3] [INFO] [map_io]: Loading yaml file: /home/unitree/nav_unitree_go2_branch_ws/install/nav_launcher/share/nav_launcher/maps/lab_map.yaml
+[map_server-3] [DEBUG] [map_io]: resolution: 0.05
+[map_server-3] [DEBUG] [map_io]: origin[0]: -8.15
+[map_server-3] [DEBUG] [map_io]: origin[1]: -15.3
+[map_server-3] [DEBUG] [map_io]: origin[2]: 0
+[map_server-3] [DEBUG] [map_io]: free_thresh: 0.25
+[map_server-3] [DEBUG] [map_io]: occupied_thresh: 0.65
+[map_server-3] [DEBUG] [map_io]: mode: trinary
+[map_server-3] [DEBUG] [map_io]: negate: 0
+[map_server-3] [INFO] [map_io]: Loading image_file: /home/unitree/nav_unitree_go2_branch_ws/install/nav_launcher/share/nav_launcher/maps/lab_map_new.pgm
+[bt_navigator-9] [INFO] [1763555884.299075931] [bt_navigator]: 
+[bt_navigator-9] 	bt_navigator lifecycle node launched. 
+[bt_navigator-9] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-9] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-9] [INFO] [1763555884.301132247] [bt_navigator]: Creating
+[amcl-4] [INFO] [1763555884.310338433] [amcl]: 
+[amcl-4] 	amcl lifecycle node launched. 
+[amcl-4] 	Waiting on external lifecycle transitions to activate
+[amcl-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-4] [INFO] [1763555884.315536824] [amcl]: Creating
+[lifecycle_manager-11] [INFO] [1763555884.343338204] [lifecycle_manager_navigation]: Creating
+[map_server-3] [DEBUG] [map_io]: Read map /home/unitree/nav_unitree_go2_branch_ws/install/nav_launcher/share/nav_launcher/maps/lab_map_new.pgm: 575 X 347 map @ 0.05 m/cell
+[lifecycle_manager-5] [INFO] [1763555884.369017251] [lifecycle_manager_localization]: Configuring amcl
+[lifecycle_manager-11] [INFO] [1763555884.387367190] [lifecycle_manager_navigation]: Creating and initializing lifecycle service clients
+[amcl-4] [INFO] [1763555884.444765587] [amcl]: Configuring
+[amcl-4] [INFO] [1763555884.448492543] [amcl]: initTransforms
+[planner_server-7] [INFO] [1763555884.458680326] [planner_server]: 
+[planner_server-7] 	planner_server lifecycle node launched. 
+[planner_server-7] 	Waiting on external lifecycle transitions to activate
+[planner_server-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[lifecycle_manager-11] [INFO] [1763555884.475182787] [lifecycle_manager_navigation]: Starting managed nodes bringup...
+[lifecycle_manager-11] [INFO] [1763555884.475857239] [lifecycle_manager_navigation]: Configuring controller_server
+[planner_server-7] [INFO] [1763555884.477135420] [planner_server]: Creating
+[controller_server-6] [INFO] [1763555884.533261652] [controller_server]: 
+[controller_server-6] 	controller_server lifecycle node launched. 
+[controller_server-6] 	Waiting on external lifecycle transitions to activate
+[controller_server-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-10] [INFO] [1763555884.549477769] [waypoint_follower]: 
+[waypoint_follower-10] 	waypoint_follower lifecycle node launched. 
+[waypoint_follower-10] 	Waiting on external lifecycle transitions to activate
+[waypoint_follower-10] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-10] [INFO] [1763555884.552739975] [waypoint_follower]: Creating
+[controller_server-6] [INFO] [1763555884.574421627] [controller_server]: Creating controller server
+[amcl-4] [INFO] [1763555884.579504270] [amcl]: initPubSub
+[recoveries_server-8] [INFO] [1763555884.586224016] [recoveries_server]: 
+[recoveries_server-8] 	recoveries_server lifecycle node launched. 
+[recoveries_server-8] 	Waiting on external lifecycle transitions to activate
+[recoveries_server-8] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-4] [INFO] [1763555884.624253629] [amcl]: Subscribed to map topic.
+[planner_server-7] [INFO] [1763555884.625477760] [global_costmap.global_costmap]: 
+[planner_server-7] 	global_costmap lifecycle node launched. 
+[planner_server-7] 	Waiting on external lifecycle transitions to activate
+[planner_server-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-7] [INFO] [1763555884.635403423] [global_costmap.global_costmap]: Creating Costmap
+[lifecycle_manager-5] [INFO] [1763555884.635526979] [lifecycle_manager_localization]: Activating map_server
+[map_server-3] [INFO] [1763555884.637626304] [map_server]: Activating
+[amcl-4] [INFO] [1763555884.643026876] [amcl]: Received a 575 X 347 map @ 0.050 m/pix
+[lifecycle_manager-5] [INFO] [1763555884.647768101] [lifecycle_manager_localization]: Activating amcl
+[amcl-4] [INFO] [1763555884.649871138] [amcl]: Activating
+[amcl-4] [WARN] [1763555884.650015398] [amcl]: Publishing the particle cloud as geometry_msgs/PoseArray msg is deprecated, will be published as nav2_msgs/ParticleCloud in the future
+[pointcloud_to_laserscan_node-2] [INFO] [1763555884.652099810] [pointcloud_to_laserscan]: Got a subscriber to laserscan, starting pointcloud subscriber
+[lifecycle_manager-5] [INFO] [1763555884.652163140] [lifecycle_manager_localization]: Managed nodes are active
+[controller_server-6] [INFO] [1763555884.728966803] [local_costmap.local_costmap]: 
+[controller_server-6] 	local_costmap lifecycle node launched. 
+[controller_server-6] 	Waiting on external lifecycle transitions to activate
+[controller_server-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-6] [INFO] [1763555884.732779489] [local_costmap.local_costmap]: Creating Costmap
+[controller_server-6] [INFO] [1763555884.773853221] [controller_server]: Configuring controller interface
+[controller_server-6] [INFO] [1763555884.779418951] [controller_server]: Controller frequency set to 20.0000Hz
+[controller_server-6] [INFO] [1763555884.779588651] [local_costmap.local_costmap]: Configuring
+[controller_server-6] [INFO] [1763555884.795323027] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+[controller_server-6] [INFO] [1763555884.803516320] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[amcl-4] [INFO] [1763555884.824491199] [amcl]: createLaserObject
+[controller_server-6] [INFO] [1763555884.830440747] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[controller_server-6] [INFO] [1763555884.830550734] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-6] [INFO] [1763555884.832868497] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[controller_server-6] [INFO] [1763555884.858608378] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-6] [INFO] [1763555884.861617841] [controller_server]: Created goal_checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-6] [INFO] [1763555884.874254655] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[controller_server-6] [INFO] [1763555884.878725344] [controller_server]: Setting transform_tolerance to 0.200000
+[controller_server-6] [INFO] [1763555884.956125984] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[controller_server-6] [INFO] [1763555884.958247485] [controller_server]: Critic plugin initialized
+[controller_server-6] [INFO] [1763555884.958795885] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[controller_server-6] [INFO] [1763555884.960742789] [controller_server]: Critic plugin initialized
+[controller_server-6] [INFO] [1763555884.961230163] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[controller_server-6] [INFO] [1763555884.962065868] [controller_server]: Critic plugin initialized
+[controller_server-6] [INFO] [1763555884.962536025] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[controller_server-6] [INFO] [1763555884.963821534] [controller_server]: Critic plugin initialized
+[controller_server-6] [INFO] [1763555884.964321485] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[controller_server-6] [INFO] [1763555884.965785207] [controller_server]: Critic plugin initialized
+[controller_server-6] [INFO] [1763555884.966312070] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[controller_server-6] [INFO] [1763555884.967192288] [controller_server]: Critic plugin initialized
+[controller_server-6] [INFO] [1763555884.967673902] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[controller_server-6] [INFO] [1763555884.968502822] [controller_server]: Critic plugin initialized
+[controller_server-6] [INFO] [1763555884.968578152] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-11] [INFO] [1763555884.998532363] [lifecycle_manager_navigation]: Configuring planner_server
+[planner_server-7] [INFO] [1763555884.999320386] [planner_server]: Configuring
+[planner_server-7] [INFO] [1763555884.999448965] [global_costmap.global_costmap]: Configuring
+[planner_server-7] [INFO] [1763555885.018323111] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-7] [INFO] [1763555885.048204808] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-7] [INFO] [1763555885.053328316] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-7] [INFO] [1763555885.053439071] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-7] [INFO] [1763555885.056993862] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-7] [INFO] [1763555885.064507392] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 575 X 347 at 0.050000 m/pix
+[planner_server-7] [INFO] [1763555885.068442194] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-7] [INFO] [1763555885.068556085] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-7] [INFO] [1763555885.082172991] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-7] [INFO] [1763555885.171728318] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner/NavfnPlanner
+[planner_server-7] [INFO] [1763555885.172105193] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-7] [INFO] [1763555885.191197105] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-11] [INFO] [1763555885.221062673] [lifecycle_manager_navigation]: Configuring recoveries_server
+[recoveries_server-8] [INFO] [1763555885.221917354] [recoveries_server]: Configuring
+[recoveries_server-8] [INFO] [1763555885.247919514] [recoveries_server]: Creating recovery plugin spin of type nav2_recoveries/Spin
+[recoveries_server-8] [INFO] [1763555885.253989386] [recoveries_server]: Configuring spin
+[recoveries_server-8] [INFO] [1763555885.304601731] [recoveries_server]: Creating recovery plugin backup of type nav2_recoveries/BackUp
+[recoveries_server-8] [INFO] [1763555885.309006146] [recoveries_server]: Configuring backup
+[recoveries_server-8] [INFO] [1763555885.337926055] [recoveries_server]: Creating recovery plugin wait of type nav2_recoveries/Wait
+[recoveries_server-8] [INFO] [1763555885.342047902] [recoveries_server]: Configuring wait
+[lifecycle_manager-11] [INFO] [1763555885.384559788] [lifecycle_manager_navigation]: Configuring bt_navigator
+[bt_navigator-9] [INFO] [1763555885.387836011] [bt_navigator]: Configuring
+[bt_navigator-9] [INFO] [1763555885.556269588] [bt_navigator_rclcpp_node]: Waiting for "compute_path_to_pose" action server
+[bt_navigator-9] [INFO] [1763555885.558823838] [bt_navigator_rclcpp_node]: "ComputePathToPose" BtActionNode initialized
+[bt_navigator-9] [INFO] [1763555885.562714287] [bt_navigator_rclcpp_node]: Waiting for "global_costmap/clear_entirely_global_costmap" service
+[bt_navigator-9] [INFO] [1763555885.563439492] [bt_navigator_rclcpp_node]: "ClearGlobalCostmap-Context" BtServiceNode initialized
+[bt_navigator-9] [INFO] [1763555885.581963644] [bt_navigator_rclcpp_node]: Waiting for "follow_path" action server
+[bt_navigator-9] [INFO] [1763555885.582578861] [bt_navigator_rclcpp_node]: "FollowPath" BtActionNode initialized
+[bt_navigator-9] [INFO] [1763555885.585871405] [bt_navigator_rclcpp_node]: Waiting for "local_costmap/clear_entirely_local_costmap" service
+[bt_navigator-9] [INFO] [1763555885.586263736] [bt_navigator_rclcpp_node]: "ClearLocalCostmap-Context" BtServiceNode initialized
+[bt_navigator-9] [INFO] [1763555885.589621561] [bt_navigator_rclcpp_node]: Waiting for "local_costmap/clear_entirely_local_costmap" service
+[bt_navigator-9] [INFO] [1763555885.590242187] [bt_navigator_rclcpp_node]: "ClearLocalCostmap-Subtree" BtServiceNode initialized
+[bt_navigator-9] [INFO] [1763555885.593467881] [bt_navigator_rclcpp_node]: Waiting for "global_costmap/clear_entirely_global_costmap" service
+[bt_navigator-9] [INFO] [1763555885.594255807] [bt_navigator_rclcpp_node]: "ClearGlobalCostmap-Subtree" BtServiceNode initialized
+[bt_navigator-9] [INFO] [1763555885.612295305] [bt_navigator_rclcpp_node]: Waiting for "spin" action server
+[bt_navigator-9] [INFO] [1763555885.613159298] [bt_navigator_rclcpp_node]: "Spin" BtActionNode initialized
+[bt_navigator-9] [INFO] [1763555885.636347393] [bt_navigator_rclcpp_node]: Waiting for "wait" action server
+[bt_navigator-9] [INFO] [1763555885.638048914] [bt_navigator_rclcpp_node]: "Wait" BtActionNode initialized
+[lifecycle_manager-11] [INFO] [1763555885.654606001] [lifecycle_manager_navigation]: Configuring waypoint_follower
+[waypoint_follower-10] [INFO] [1763555885.656545258] [waypoint_follower]: Configuring
+[lifecycle_manager-11] [INFO] [1763555885.791946327] [lifecycle_manager_navigation]: Activating controller_server
+[controller_server-6] [INFO] [1763555885.792761999] [controller_server]: Activating
+[controller_server-6] [INFO] [1763555885.792890387] [local_costmap.local_costmap]: Activating
+[controller_server-6] [INFO] [1763555885.792937492] [local_costmap.local_costmap]: Checking transform
+[controller_server-6] [INFO] [1763555885.793152922] [local_costmap.local_costmap]: start
+[lifecycle_manager-11] [INFO] [1763555885.850300752] [lifecycle_manager_navigation]: Activating planner_server
+[planner_server-7] [INFO] [1763555885.863568880] [planner_server]: Activating
+[planner_server-7] [INFO] [1763555885.863706548] [global_costmap.global_costmap]: Activating
+[planner_server-7] [INFO] [1763555885.863743765] [global_costmap.global_costmap]: Checking transform
+[planner_server-7] [INFO] [1763555885.863805174] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[planner_server-7] [INFO] [1763555886.363879483] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-4] [WARN] [1763555886.515836071] [amcl]: ACML cannot publish a pose or update the transform. Please set the initial pose...
+[set_initial_pose-13] [INFO] [1763555886.835506312] [initial_pose_setter]: Initial pose setter started. Will publish pose at (0.0, 0.0, 0.0) after 3.0 seconds
+[planner_server-7] [INFO] [1763555886.863867900] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-12] [INFO] [1763555887.242498502] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-12] [INFO] [1763555887.242962452] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[planner_server-7] [INFO] [1763555887.363852029] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-12] [INFO] [1763555887.398445606] [rviz2]: Stereo is NOT SUPPORTED
+[planner_server-7] [INFO] [1763555887.863862174] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[pointcloud_to_laserscan_node-2] [WARN] [1763555887.980860823] [pointcloud_to_laserscan]: New subscription discovered on this topic, requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
+[rviz2-12] [INFO] [1763555888.272536332] [rviz2]: Trying to create a map of size 575 x 347 using 1 swatches
+[planner_server-7] [INFO] [1763555888.363861694] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-4] [WARN] [1763555888.594702132] [amcl]: ACML cannot publish a pose or update the transform. Please set the initial pose...
+[rviz2-12] [INFO] [1763555888.836733325] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555887.635 for reason 'Unknown'
+[planner_server-7] [INFO] [1763555888.863863710] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-12] [INFO] [1763555888.932665445] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555887.691 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.060277776] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555887.742 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.124706072] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555887.835 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.188741236] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555887.888 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.220817652] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555887.936 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.287957738] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555887.989 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.349026576] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.039 for reason 'Unknown'
+[planner_server-7] [INFO] [1763555889.363870462] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-12] [INFO] [1763555889.445984869] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.090 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.476811361] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.192 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.509041605] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.291 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.540784667] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.394 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.580608507] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.495 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.702996111] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.595 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.748937312] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.691 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.768619385] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.747 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.800966337] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.795 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.833109187] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.844 for reason 'Unknown'
+[set_initial_pose-13] [INFO] [1763555889.837868108] [initial_pose_setter]: Published initial pose: x=0.0, y=0.0, yaw=0.0
+[amcl-4] [INFO] [1763555889.839038286] [amcl]: initialPoseReceived
+[amcl-4] [WARN] [1763555889.839431290] [amcl]: Failed to transform initial pose in time (Lookup would require extrapolation into the future.  Requested time 1763555889.839171 but the latest data is at time 1763555889.815620, when looking up transform from frame [base_link] to frame [odom])
+[amcl-4] [INFO] [1763555889.839499484] [amcl]: Setting pose (1763555889.839499): 0.000 0.000 0.000
+[planner_server-7] [INFO] [1763555889.864444685] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-12] [INFO] [1763555889.923091182] [rviz2]: Message Filter dropping message: frame 'odom' at time 0.000 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.923814946] [rviz2]: Message Filter dropping message: frame 'odom' at time 0.000 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.924156268] [rviz2]: Message Filter dropping message: frame 'odom' at time 0.000 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555889.928700080] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.894 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555890.054842864] [rviz2]: Trying to create a map of size 60 x 60 using 1 swatches
+[rviz2-12] [INFO] [1763555890.123910654] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555888.997 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555890.170413503] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.048 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555890.230343877] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.093 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555890.276328695] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.143 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555890.338309175] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.198 for reason 'Unknown'
+[planner_server-7] [INFO] [1763555890.363994622] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 1763555890.341610 but the earliest data is at time 1763555890.450109, when looking up transform from frame [base_link] to frame [map]
+[rviz2-12] [INFO] [1763555890.437357640] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.247 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555890.504695268] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.299 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555890.592071747] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.350 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555890.668140283] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.398 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555890.736575639] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.450 for reason 'Unknown'
+[set_initial_pose-13] [INFO] [1763555890.840315119] [initial_pose_setter]: Initial pose published successfully. Shutting down.
+[rviz2-12] [INFO] [1763555890.841831003] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.500 for reason 'Unknown'
+[planner_server-7] [INFO] [1763555890.864101087] [global_costmap.global_costmap]: start
+[planner_server-7] [INFO] [1763555890.921691553] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[lifecycle_manager-11] [INFO] [1763555890.927386054] [lifecycle_manager_navigation]: Activating recoveries_server
+[recoveries_server-8] [INFO] [1763555890.928476869] [recoveries_server]: Activating
+[recoveries_server-8] [INFO] [1763555890.928573928] [recoveries_server]: Activating spin
+[recoveries_server-8] [INFO] [1763555890.928604969] [recoveries_server]: Activating backup
+[recoveries_server-8] [INFO] [1763555890.928626250] [recoveries_server]: Activating wait
+[lifecycle_manager-11] [INFO] [1763555890.930441534] [lifecycle_manager_navigation]: Activating bt_navigator
+[bt_navigator-9] [INFO] [1763555890.931273238] [bt_navigator]: Activating
+[lifecycle_manager-11] [INFO] [1763555890.932371958] [lifecycle_manager_navigation]: Activating waypoint_follower
+[waypoint_follower-10] [INFO] [1763555890.933205646] [waypoint_follower]: Activating
+[lifecycle_manager-11] [INFO] [1763555890.935617780] [lifecycle_manager_navigation]: Managed nodes are active
+[rviz2-12] [INFO] [1763555890.955478770] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.545 for reason 'Unknown'
+[rviz2-12] [INFO] [1763555891.139911176] [rviz2]: Message Filter dropping message: frame 'base_link' at time 1763555889.597 for reason 'Unknown'
+[planner_server-7] [INFO] [1763555891.252807210] [global_costmap.global_costmap_rclcpp_node]: Message Filter dropping message: frame 'base_link' at time 1763555890.410 for reason 'Unknown'
+[rviz2-12] [WARN] [1763555899.504617899] [rviz2]: New publisher discovered on this topic, offering incompatible QoS. No messages will be sent to it. Last incompatible policy: DURABILITY_QOS_POLICY

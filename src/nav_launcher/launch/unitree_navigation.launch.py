@@ -16,10 +16,11 @@ def generate_launch_description():
     # 获取包路径
     nav_launcher_dir = get_package_share_directory('nav_launcher')
     nav2_bringup_dir = get_package_share_directory('nav2_bringup')
+    pointcloud_to_laserscan_dir = get_package_share_directory('pointcloud_to_laserscan')
     
     # 配置文件路径
     default_params_file = os.path.join(nav_launcher_dir, 'params', 'unitree_nav2_params_DWB.yaml')
-    default_map_file = os.path.join(nav_launcher_dir, 'maps', 'office_map.yaml')
+    default_map_file = os.path.join(nav_launcher_dir, 'maps', 'lib_11_20_map.yaml')
     default_rviz_config = os.path.join(nav_launcher_dir, 'rviz', 'nav2_default.rviz')
     
     # 调试：打印路径
@@ -117,6 +118,29 @@ def generate_launch_description():
         default_value='true',
         description='是否自动设置初始位姿')
     
+    # 启动odom发布
+    odom_publisher_cmd = Node(
+        package='go2_odom_publisher',
+        executable='go2_odom_publisher',
+        name='go2_odom_publisher',
+        output='screen',
+    )
+
+    # 启动/cmd_vel话题重映射节点
+    api_remap_cmd_vel_node = Node(
+        package='go2_twist_bridge_py',
+        executable='twist_bridge',
+        name='twist_bridge',
+        output='screen',
+    )
+
+    # 启动pointcloud to laser转换节点
+    pointcloud_to_laserscan_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pointcloud_to_laserscan_dir, 'launch', 'sample_pointcloud_to_laserscan_launch.py')
+        )
+    )
+
     # 启动 Nav2 导航栈
     # 添加 cmd_vel 话题重映射：/cmd_vel -> /host/cmd_vel
     nav2_bringup_launch = GroupAction([
@@ -125,7 +149,7 @@ def generate_launch_description():
             namespace=namespace),
         
         # 重映射 cmd_vel 话题到 Unitree 机器人的速度命令话题
-        SetRemap(src='/cmd_vel', dst='/host/cmd_vel'),
+        # SetRemap(src='/cmd_vel', dst='/host/cmd_vel'),
         
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
@@ -196,6 +220,9 @@ def generate_launch_description():
     ld.add_action(declare_auto_set_initial_pose_cmd)
     
     # 添加节点和包含的启动文件
+    ld.add_action(odom_publisher_cmd)
+    ld.add_action(api_remap_cmd_vel_node)
+    ld.add_action(pointcloud_to_laserscan_launch)
     ld.add_action(nav2_bringup_launch)
     ld.add_action(rviz_cmd)
     ld.add_action(set_initial_pose_cmd)

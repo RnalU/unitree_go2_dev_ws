@@ -3,3 +3,6 @@ build/*
 install/*
 log/*
 build_and_test*
+*.pgm
+*_map.yaml
+*.pcd

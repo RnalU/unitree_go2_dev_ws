@@ -1,0 +1,85 @@
+In file included from /home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.cpp:1:
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:29: error: ‘livox_ros_driver2’ does not name a type
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                             ^~~~~~~~~~~~~~~~~
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:51: error: expected unqualified-id before ‘::’ token
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                                                   ^~
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:51: error: expected ‘)’ before ‘::’ token
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                      ~                            ^~
+      |                                                   )
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:48: error: expected ‘;’ at end of member declaration
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                                                ^~~
+      |                                                   ;
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:53: error: ‘CustomMsg’ in namespace ‘::’ does not name a type
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                                                     ^~~~~~~~~
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.cpp:136:6: error: no declaration matches ‘void Preprocess::avia_handler(const SharedPtr&)’
+  136 | void Preprocess::avia_handler(const sensor_msgs::msg::PointCloud2::SharedPtr &msg) {
+      |      ^~~~~~~~~~
+In file included from /home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.cpp:1:
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:10: note: candidate is: ‘void Preprocess::avia_handler(...)’
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |          ^~~~~~~~~~~~
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:136:7: note: ‘class Preprocess’ defined here
+  136 | class Preprocess {
+      |       ^~~~~~~~~~
+In file included from /home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/parameters.h:10,
+                 from /home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/parameters.cpp:1:
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:29: error: ‘livox_ros_driver2’ does not name a type
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                             ^~~~~~~~~~~~~~~~~
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:51: error: expected unqualified-id before ‘::’ token
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                                                   ^~
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:51: error: expected ‘)’ before ‘::’ token
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                      ~                            ^~
+      |                                                   )
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:48: error: expected ‘;’ at end of member declaration
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                                                ^~~
+      |                                                   ;
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:53: error: ‘CustomMsg’ in namespace ‘::’ does not name a type
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                                                     ^~~~~~~~~
+In file included from /home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/parameters.h:10,
+                 from /home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/Estimator.h:6,
+                 from /home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/Estimator.cpp:2:
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:29: error: ‘livox_ros_driver2’ does not name a type
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                             ^~~~~~~~~~~~~~~~~
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:51: error: expected unqualified-id before ‘::’ token
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                                                   ^~
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:51: error: expected ‘)’ before ‘::’ token
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                      ~                            ^~
+      |                                                   )
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:48: error: expected ‘;’ at end of member declaration
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                                                ^~~
+      |                                                   ;
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:53: error: ‘CustomMsg’ in namespace ‘::’ does not name a type
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                                                     ^~~~~~~~~
+In file included from /home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/parameters.h:10,
+                 from /home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/laserMapping.cpp:26:
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:29: error: ‘livox_ros_driver2’ does not name a type
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                             ^~~~~~~~~~~~~~~~~
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:51: error: expected unqualified-id before ‘::’ token
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                                                   ^~
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:51: error: expected ‘)’ before ‘::’ token
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                      ~                            ^~
+      |                                                   )
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:48: error: expected ‘;’ at end of member declaration
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);
+      |                                                ^~~
+      |                                                   ;
+/home/unitree/nav_unitree_go2_branch_ws/src/point_lio_ros2-main/src/preprocess.h:162:53: error: ‘CustomMsg’ in namespace ‘::’ does not name a type
+  162 |     void avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg);

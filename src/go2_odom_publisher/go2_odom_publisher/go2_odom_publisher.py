@@ -15,7 +15,7 @@ class OdomTFBroadcaster(Node):
     def odom_cb(self, msg: Odometry):
         t = TransformStamped()
         t.header = msg.header
-        t.child_frame_id = 'base_footprint'  # or msg.child_frame_id
+        t.child_frame_id = 'base_link'  # or msg.child_frame_id
         t.transform.translation.x = msg.pose.pose.position.x
         t.transform.translation.y = msg.pose.pose.position.y
         t.transform.translation.z = msg.pose.pose.position.z

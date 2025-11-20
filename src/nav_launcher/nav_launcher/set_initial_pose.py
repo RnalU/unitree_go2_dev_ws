@@ -18,7 +18,7 @@ class InitialPoseSetter(Node):
         self.declare_parameter('initial_pose_x', 0.0)
         self.declare_parameter('initial_pose_y', 0.0)
         self.declare_parameter('initial_pose_yaw', 0.0)
-        self.declare_parameter('delay_sec', 2.0)  # 延迟发布(等待AMCL启动)
+        self.declare_parameter('delay_sec', 1.0)  # 延迟发布(等待AMCL启动)
         
         # 获取参数
         self.x = self.get_parameter('initial_pose_x').value
